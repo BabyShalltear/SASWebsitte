@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{ margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+html { scroll-behavior: smooth; }
+body { color:#fff; background:#1e1e1e;}
+
+section { scroll-margin-top:100px; padding:60px 50px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+
+/* Navbar */
+.navbar { position: fixed; top:0; left:0; width:100%; height:80px; padding:0 50px; display:flex; justify-content:space-between; align-items:center; background: rgba(34,34,34,0.85); z-index:999; transition: background 0.3s; }
+.navbar:hover { background: rgba(34,34,34,1); }
+.navbar h2 { color:#ffb742; font-weight:600; }
+.navbar ul { display:flex; }
+.navbar ul li { list-style:none; }
+.navbar ul li a { color:#fff; text-decoration:none; margin-right:25px; transition:color 0.3s; }
+.navbar ul li:hover a { color:#ffb742; }
+.order-btn { background:#ffb742; padding:6px 30px; border:none; border-radius:6px; cursor:pointer; transition:0.3s; }
+.order-btn:hover { background:#fb8c00; }
+
+/* Главная секция */
+.main-section { position:relative; height:100vh; overflow:hidden; }
+.hero-bg {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  background: url('https://images.unsplash.com/photo-1605808510581-1be2173a8d59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') center/cover no-repeat;
+  filter: brightness(0.5);
+  z-index:-1;
+  transition: transform 0.5s ease;
+}
+.main { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding-top:80px; }
+.main h4 { font-size:32px; color:#fff; font-weight:600; }
+.main h4 span { color:#ffb742; text-decoration:underline; }
+.main p.title { font-size:44px; font-weight:600; margin-top:8px; }
+.main p.subtitle { font-size:16px; color:#ccc; margin-top:20px; }
+.main img { width:200px; height:200px; margin-top:40px; border-radius:12px; }
+
+/* Заголовки секций */
+.whoim { margin-bottom:30px; padding:8px 16px; background: rgba(255,255,255,0.05); display:inline-block; color:#ffb742; border-radius:12px; font-size:20px; font-weight:600; }
+
+/* Услуги */
+.skills { display:flex; justify-content:center; flex-wrap:wrap; gap:50px; }
+.skills .left { max-width:600px; }
+.features { list-style:none; }
+.features li { display:flex; align-items:center; color:#fff; font-size:16px; margin-bottom:12px; }
+.features li i { color:#ffb742; font-size:20px; margin-right:10px; }
+
+/* Прайс */
+.pricing { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; }
+.price-item { background:#292b2e; border-radius:12px; padding:30px 20px; width:260px; text-align:center; border:1px solid transparent; transition:all 0.3s ease; cursor:pointer; }
+.price-item:hover { border-color:#ffb742; transform:translateY(-5px); }
+.price-item h3 { color:#ffb742; font-size:22px; margin-bottom:12px; }
+.price-item p { color:#fff; font-size:16px; }
+
+/* О нас */
+.about { display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start; justify-content:center; }
+.about img { width:280px; border-radius:12px; }
+.about .info { max-width:600px; }
+.about .info h3 { color:#fff; font-size:32px; margin-bottom:10px; }
+.about .info p { color:#ccc; font-size:14px; }
+
+/* Отзывы */
+.guarantee { display:flex; flex-wrap:wrap; gap:24px; justify-content:center; }
+.guarantee .item { background:#292b2e; display:flex; justify-content:space-between; align-items:center; height:100px; width:300px; border-radius:10px; padding:0 30px; border:1px solid transparent; cursor:pointer; transition:all 0.3s ease; }
+.guarantee .item:hover { border-color:#ffb742; }
+.guarantee .item .icon { width:46px; height:46px; background:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:0.3s; }
+.guarantee .item:hover .icon { background-color:#ffb742; }
+.guarantee .item .icon i { font-size:30px; }
+.guarantee .item .info { display:flex; flex-direction:column; align-items:center; }
+.guarantee .item .info h3 { color:#ffb742; font-size:28px; }
+.guarantee .item .info p { color:#fff; font-size:15px; font-weight:600; }
+.guarantee .item > i { color:#fff; font-size:30px; transition:0.3s; }
+.guarantee .item:hover > i { color:#ffb742; }
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about img {
+  width: 280px;
+  border-radius: 12px;
+}
+
+.about .info {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column; /* Текст сверху, кнопка под ним */
+  text-align: left;       /* Можно center, если хочешь */
+}
+
+.learn-btn {
+  margin-top: 15px;       /* Отступ от текста */
+  padding: 10px 25px;
+  background-color: #ffb742;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.learn-btn:hover {
+  background-color: #ffb742;
+}
+
+
+/* Фон для секции Услуги */
+.services-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://v4.hentai-hub.net/templates/new-hentai-hub_v5/images/1920.webp") center/cover no-repeat;
+  z-index: 1;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* затемнение, чтобы текст был читаемым */
+  z-index: -1;
+}
+
+/* Фон для секции Обо мне */
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://v4.hentai-hub.net/templates/new-hentai-hub_v5/images/1920.webp") center/cover no-repeat;
+  z-index: 1;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
